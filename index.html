@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Buscaminas</h1>
+  <div class="settings">
+    <label for="difficulty">Dificultad:</label>
+    <select id="difficulty" onchange="toggleCustomSettings()">
+      <option value="easy">Fácil</option>
+      <option value="medium">Medio</option>
+      <option value="hard">Difícil</option>
+      <option value="very-hard">Muy Difícil</option>
+      <option value="hardcore">Hardcore</option>
+      <option value="custom">Personalizado</option>
+    </select>
+    <div id="custom-settings" style="display: none;">
+      <label for="rows">Filas:</label>
+      <input type="number" id="rows" min="5" value="10">
+      <label for="cols">Columnas:</label>
+      <input type="number" id="cols" min="5" value="10">
+      <label for="mines">Minas:</label>
+      <input type="number" id="mines" min="1" value="10">
+    </div>
+    <button onclick="startGame()">Iniciar Juego</button>
+  </div>
+  <div id="game-board"></div>
+  <script src="script.js"></script>
+</body>
+</html>
